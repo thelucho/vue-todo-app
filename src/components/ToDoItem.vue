@@ -19,7 +19,7 @@ export default {
             return this.item.status
         },
         taskStatus() {
-            return this.item.status ? 'Undone' : 'Done'
+            return this.item.status ? 'Reset' : 'Done'
         }
     },
     methods: {
