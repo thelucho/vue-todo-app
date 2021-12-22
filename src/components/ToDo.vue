@@ -15,18 +15,17 @@ export default {
   data() {
     return {
       tasksList: [
-        { title: 'Primer tarea', description: 'Lorem ipsum dolor sit amet', status: true },
-        { title: 'Segunda tarea', description: 'Lorem ipsum dolor sit', status: true },
-        { title: 'Tercer tarea', description: 'Lorem ipsum dolor sit amet', status: false },
-        { title: 'Cuarta tarea', description: 'Lorem sit amet', status: false },
-        { title: 'Quinta tarea', description: 'Ipsum dolor sit amet', status: false }
+        { title: 'Cambiar aceite auto', description: 'Lorem ipsum dolor sit amet', status: true },
+        { title: 'Comprar café', description: 'Lorem ipsum dolor sit', status: true },
+        { title: 'Llamar a Marty McFly', description: 'Lorem ipsum dolor sit amet', status: false },
+        { title: 'Volver al pasado', description: 'Lorem sit amet', status: false },
+        { title: 'Comprar bitcoins', description: 'Ipsum dolor sit amet', status: false }
       ]
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 a {
   color: #42b983;
