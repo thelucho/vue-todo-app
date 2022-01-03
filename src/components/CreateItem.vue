@@ -1,6 +1,6 @@
 <template>
   <div class="create-item">
-    <form @submit.prevent="addItem()">
+    <form data-cy="taskForm" @submit.prevent="addItem()">
       <input v-model="value" type="text" placeholder="Ingrese una tarea..." />
       <button type="button" class="btn-add-task" @click.prevent="addItem()" :disabled="!isFormValid">
         Agregar tarea

@@ -1,5 +1,5 @@
 <template>
-  <li :class="{ completed: isCompleted }">
+  <li data-cy="taskItem" :class="{ completed: isCompleted }">
     <span>{{ this.item.title }}</span>
     <button @click="deleteItem(item)" class="btn-delete">&times; Delete</button>
     <button @click="completeItem(item)" class="btn-complete" :class="taskStatus">

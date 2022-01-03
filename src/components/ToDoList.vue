@@ -1,7 +1,7 @@
 <template>
-  <div class="todo-list">
+  <div data-cy="tasksList" class="todo-list">
     <ul>
-      <div v-if="isDataEmpty">No hay tareas por realizar, Great !!!</div>
+      <div v-if="isDataEmpty" class="empty">No hay tareas por realizar. Great &#128076; !!</div>
       <div v-else class="filters">
         <button
           v-for="(btn, idx) in filterList"
@@ -20,7 +20,6 @@
         v-on:complete-task="completeTask"
       />
 
-      <!--<pre style="text-align: left;">{{ data }}</pre>-->
     </ul>
     <p>Tareas por hacer: {{ remainingTasks }}</p>
 
@@ -86,8 +85,8 @@ export default {
     },
     deleteTask(item) {
       console.log(item)
-      const todoIndex = this.data.indexOf(item);
-      this.data.splice(todoIndex, 1);
+      const todoIndex = this.data.indexOf(item)
+      this.data.splice(todoIndex, 1)
     },
     completeTask(item) {
       item.status = !item.status
@@ -98,6 +97,11 @@ export default {
 <style lang="scss">
 .todo-list {
   width: 100%;
+
+  .empty {
+    text-align: center;
+    width: 100%;
+  }
 
   ul {
     background-color: rgb(238, 238, 238);
