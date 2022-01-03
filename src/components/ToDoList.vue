@@ -1,5 +1,5 @@
 <template>
-  <div class="todo-list">
+  <div data-cy="tasksList" class="todo-list">
     <ul>
       <div v-if="isDataEmpty" class="empty">No hay tareas por realizar, Great &#128076; !!</div>
       <div v-else class="filters">
