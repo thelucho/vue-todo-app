@@ -14,14 +14,11 @@ export default {
   },
   data() {
     return {
-      tasksList: [
-        { title: 'Cambiar aceite auto', description: 'Lorem ipsum dolor sit amet', status: true },
-        { title: 'Comprar café', description: 'Lorem ipsum dolor sit', status: true },
-        { title: 'Llamar a Marty McFly', description: 'Lorem ipsum dolor sit amet', status: false },
-        { title: 'Volver al pasado', description: 'Lorem sit amet', status: false },
-        { title: 'Comprar bitcoins', description: 'Ipsum dolor sit amet', status: false }
-      ]
+      tasksList: []
     }
+  },
+  created() {
+    this.tasksList = JSON.parse(localStorage.getItem('todo-storage') || [])
   }
 }
 </script>
