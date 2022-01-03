@@ -82,14 +82,20 @@ export default {
     addTask(value) {
       console.log(value)
       this.data.push(value)
+      this.setLocalStorage(this.data)
     },
     deleteTask(item) {
       console.log(item)
       const todoIndex = this.data.indexOf(item)
       this.data.splice(todoIndex, 1)
+      this.setLocalStorage(this.data)
     },
     completeTask(item) {
       item.status = !item.status
+      this.setLocalStorage(this.data)
+    },
+    setLocalStorage(data) {
+      localStorage.setItem('todo-storage', JSON.stringify(data))
     }
   }
 }
