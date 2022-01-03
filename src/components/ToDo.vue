@@ -18,7 +18,7 @@ export default {
     }
   },
   created() {
-    this.tasksList = JSON.parse(localStorage.getItem('todo-storage') || [])
+    this.tasksList = JSON.parse(localStorage.getItem('todo-storage') || '[]')
   }
 }
 </script>

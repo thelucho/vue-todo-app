@@ -80,12 +80,10 @@ export default {
   },
   methods: {
     addTask(value) {
-      console.log(value)
       this.data.push(value)
       this.setLocalStorage(this.data)
     },
     deleteTask(item) {
-      console.log(item)
       const todoIndex = this.data.indexOf(item)
       this.data.splice(todoIndex, 1)
       this.setLocalStorage(this.data)
